@@ -1,12 +1,16 @@
 //Map
 function mapLoc() {
-    var mapOptions = {
-        center: new google.maps.LatLng(48.439093, -123.370151),
-        zoom: 15,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+var samco = {lat: 48.438367, lng: -123.370304}; 
+    var map = new google.maps.Map(document.getElementById("map"), {
+       zoom: 15,
+        center: samco
+    });
+    var marker = new google.maps.Marker({
+        position: samco,
+        map: map
+    });
 }
+
 
 //Scroll
 $(document).on('click', 'a', function(event){
@@ -15,3 +19,4 @@ $(document).on('click', 'a', function(event){
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 500);
 });
+
