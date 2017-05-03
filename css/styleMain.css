@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Lustria');
+body {
+    background-image: url(../images/background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#nav {
+    position: fixed;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(32, 38, 56);
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+    background: linear-gradient(rgba(32, 38, 56, 1), rgba(32, 38, 56, 0));
+}
+
+#titleSpacer {
+    height: 35px;
+}
+
+#contentSpacer {
+    display: flex;
+    align-items: flex-end;
+    height: calc(100vh - 268px);
+    /*Change once header size is known*/
+}
+
+#grad {
+    background: linear-gradient(rgba(3, 6, 15, 0), rgba(3, 6, 15, 1));
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#grad h4 {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#content {
+    background-color: rgb(3, 6, 15);
+    background: radial-gradient(rgba(15, 30, 75, 1) 25%, rgba(3, 6, 15, 1) 75%);
+}
+
+#content>div:nth-child(1) {
+    padding: 100px 0 0 0;
+}
+
+#content>div:nth-child(2) {
+    padding: 100px 0 0 0;
+    #margin: 100px 0 0 0;
+}
+
+#content>div:nth-child(3) {
+    padding: 100px 0 0 0;
+}
+
+#images div {
+    /*update to nth-child*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#images img {
+    max-width: 100%;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+#content>div:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 0 0 0;
+    background-color: rgb(57, 63, 81);
+    #background-color: rgb(9, 18, 45);
+}
+
+#map {
+    height: 300px;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+
+#contact div {
+    display: flex;
+    justify-content: space-around;
+}
+
+h1 {
+    font-family: 'Lustria', serif;
+    color: rgba(252, 246, 212, 1);
+    font-size: 2em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+h2 {
+    font-family: 'Lustria', serif;
+    color: rgba(252, 246, 212, 1);
+    font-size: 1.5em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+h3 {
+    font-family: 'Lustria', serif;
+    font-size: 1.2em;
+    margin: 0px;
+}
+
+h4 {
+    font-family: 'Lustria', serif;
+    text-align: center;
+    color: rgba(252, 246, 212, 1);
+    font-size: 2em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+p {
+    color: rgba(252, 246, 212, 1);
+}
+
+li {
+    color: rgba(252, 246, 212, 1);
+}
+i {
+    color: white;
+}
+
+/*Hover animation*/
+
+#nav a h3 {
+    color: rgba(252, 246, 212, 1);
+    text-decoration: none;
+    display: inline-block;
+}
+
+#nav a h3:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+#nav a h3:hover:after {
+    width: 100%;
+    background: rgba(252, 246, 212, 1);
+}
+
+@media only screen and (min-width: 576px) {
+    #title {
+        flex-direction: row;
+    }
+    #contentSpacer {
+        height: calc(100vh - 215px);
+    }
+    #grad h4 {
+        font-size: 1.8em;
+    }
+    h4 {
+        font-size: 3em;
+    }
+    p,
+    li {
+        font-size: 1.25em;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #content>div:nth-child(4) {
+        flex-direction: row;
+    }
+    #map,
+    #contact {
+        width: 50%;
+    }
+    #contact {
+        padding: 0 0 0 0;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2.5em;
+    }
+    h3 {
+        font-size: 1.8em;
+    }
+    #grad h4 {
+        font-size: 2.2em;
+    }
+    h4 {
+        font-size: 4em
+    }
+    p,
+    li {
+        font-size: 2em;
+    }
+}
