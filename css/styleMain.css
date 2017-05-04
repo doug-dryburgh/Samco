@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lustria');
 body {
     background-image: url(../images/background.jpeg);
-    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+   
+    background-size: cover;
 }
 
 #nav {
@@ -139,9 +140,11 @@ p {
 li {
     color: rgba(252, 246, 212, 1);
 }
+
 i {
     color: white;
 }
+
 
 /*Hover animation*/
 
