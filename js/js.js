@@ -20,3 +20,9 @@ $(document).on('click', 'a', function(event){
     }, 500);
 });
 
+/*//Menu
+$(".nav").hover(function() {
+    $(".menu").animate({
+        height: "300px"
+    }, 500);
+});*/

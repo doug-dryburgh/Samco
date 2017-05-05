@@ -17,19 +17,41 @@ body {
     height: 35px;
     display: flex;
     flex-direction: row;
-        justify-content: flex-end;
+        justify-content: center;
 
     align-items: center;
-    background-color: rgb(32, 38, 56);
+        background-color: rgb(57, 63, 81);
+
+    #background-color: rgb(32, 38, 56);
     padding-right: 10px;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 35px;
+    background-color: rgb(57, 63, 81);
+    text-align: center;
+    width: 100%;
+    max-height: 0;
+    font-size: 2em;
+    padding: 0 10px 0 10px;
+    overflow: hidden;
+        #transition: 1s;
+
+}
+#navigationSml:hover + .menu {
+    max-height: auto;
 }
 
 #title {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    height: 35px;
     padding: 0 20px 0 20px;
-    background: linear-gradient(rgba(32, 38, 56, 1), rgba(32, 38, 56, 0));
+    background-color: rgba(0, 0, 0, 0.5);
+    
 }
 
 .titleSpacer {
@@ -44,7 +66,7 @@ body {
 }
 
 #grad {
-    background: linear-gradient(rgba(3, 6, 15, 0), rgba(3, 6, 15, 1));
+    #background: linear-gradient(rgba(3, 6, 15, 0), rgba(3, 6, 15, 0.95));
     height: 110px;
     display: flex;
     justify-content: center;
@@ -56,44 +78,53 @@ body {
     font-size: 1.2em;
 }
 
-#content {
+.content {
     background-color: rgb(3, 6, 15);
-    background: radial-gradient(rgba(15, 30, 75, 1) 25%, rgba(3, 6, 15, 1) 75%);
+    #background: radial-gradient(rgba(15, 30, 75, 0.95) 25%, rgba(3, 6, 15, 0.95) 75%);
 }
 
-#content>div:nth-child(1) {
+.about {
     padding: 100px 0 0 0;
 }
 
-#content>div:nth-child(2) {
-    padding: 100px 0 0 0;
-    #margin: 100px 0 0 0;
-}
-
-#content>div:nth-child(3) {
+.services {
     padding: 100px 0 0 0;
 }
+.services div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
 
-#images div {
-    /*update to nth-child*/
+.services div figure {
+    padding: 0 20px 0 20px;;
+    text-align: center;
+}
+
+.images {
+    padding: 100px 0 0 0;
+}
+
+.images div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-#images img {
+.images img {
     max-width: 100%;
     border-radius: 50px;
     margin-top: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-#content>div:nth-child(4) {
+.footer {
     display: flex;
     flex-direction: column;
     margin: 100px 0 0 0;
     background-color: rgb(57, 63, 81);
-    #background-color: rgb(9, 18, 45);
 }
 
 #map {
@@ -117,6 +148,8 @@ h1 {
     font-family: 'Lustria', serif;
     color: rgba(252, 246, 212, 1);
     font-size: 2em;
+    margin: 0;
+
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
 }
 
@@ -124,6 +157,8 @@ h2 {
     font-family: 'Lustria', serif;
     color: rgba(252, 246, 212, 1);
     font-size: 1.5em;
+        margin: 0;
+
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
 }
 
@@ -137,7 +172,7 @@ h3 {
 h4 {
     font-family: 'Lustria', serif;
     text-align: center;
-    color: rgba(252, 246, 212, 1);
+    color: white;
     font-size: 2em;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
 }
@@ -155,18 +190,23 @@ li {
 i {
     color: white;
 }
+figcaption {
+    color: white;
+}
 
 
 /*Hover animation*/
 
-#nav a h3,
+.nav h3,
+.menu h3,
 i {
     color: white;
     text-decoration: none;
     display: inline-block;
 }
 
-#nav a h3:after,
+.nav h3:after,
+.menu h3:after,
 i:after {
     content: '';
     display: block;
@@ -177,7 +217,8 @@ i:after {
     transition: width .5s ease, background-color .5s ease;
 }
 
-#nav a h3:hover:after,
+.nav h3:hover:after,
+.menu h3:hover:after,
 i:hover:after {
     width: 100%;
     background: rgba(252, 246, 212, 1);
@@ -213,7 +254,7 @@ i:hover:after {
 }
 
 @media only screen and (min-width: 768px) {
-    #content>div:nth-child(4) {
+    .footer {
         flex-direction: row;
     }
     #map,
