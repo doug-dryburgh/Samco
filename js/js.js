@@ -1,8 +1,11 @@
 //Map
 function mapLoc() {
-var samco = {lat: 48.438367, lng: -123.370304}; 
+    var samco = {
+        lat: 48.438367,
+        lng: -123.370304
+    };
     var map = new google.maps.Map(document.getElementById("map"), {
-       zoom: 15,
+        zoom: 15,
         center: samco
     });
     var marker = new google.maps.Marker({
@@ -13,16 +16,9 @@ var samco = {lat: 48.438367, lng: -123.370304};
 
 
 //Scroll
-$(document).on('click', 'a', function(event){
+$(document).on('click', 'a', function (event) {
 
     $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
+        scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
 });
-
-/*//Menu
-$(".nav").hover(function() {
-    $(".menu").animate({
-        height: "300px"
-    }, 500);
-});*/
